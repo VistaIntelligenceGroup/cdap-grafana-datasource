@@ -1,0 +1,30 @@
+{
+  "id": "cdap-grafana-datasource",
+  "type": "datasource",
+  "name": "CDAP",
+  "metrics": true,
+  "annotations": false,
+  "info": {
+    "description": "CDAP datasource for Grafana",
+    "author": {
+      "name": "Vista Intelligence Group",
+      "url": "https://www.vistaequitypartners.com/vig"
+    },
+    "logos": {
+      "small": "img/cdap_logo_small.png",
+      "large": "img/cdap_logo_large.png"
+    },
+    "links": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/VistaIntelligenceGroup/cdap-grafana-datasource"
+      }
+    ],
+    "keywords": ["CDAP"],
+    "version": "1.0.0-SNAPSHOT",
+    "updated": "2017-02-17"
+  },
+  "dependencies": {
+    "plugins": [ ]
+  }
+}
