@@ -1,0 +1,107 @@
+<query-editor-row query-ctrl="ctrl" class="generic-datasource-query-row" has-text-edit-mode="true">
+  <div class="gf-form-inline">
+    <div class="gf-form">
+      <label class="gf-form-label query-keyword width-7">
+        <span>CONTEXT</span>&nbsp;
+      </label>
+    </div>
+
+    <div class="gf-form" ng-repeat="tag in ctrl.tags">
+      <metric-segment segment="tag"
+        get-options="ctrl.getTagOptions($index)"
+        on-change="ctrl.tagChanged($index)"></metric-segment>
+    </div>
+
+    <div class="gf-form" ng-if="ctrl.canAddTag()">
+      <button class="btn btn-inverse gf-form-btn" ng-click="ctrl.addTag()">
+        <i class="fa fa-plus "></i>
+      </button>
+    </div>
+
+    <div class="gf-form" ng-if="ctrl.tags.length > 0">
+      <button class="btn btn-inverse gf-form-btn" ng-click="ctrl.removeTag()">
+        <i class="fa fa-minus "></i>
+      </button>
+    </div>
+
+    <div class="gf-form gf-form--grow">
+      <div class="gf-form-label gf-form-label--grow"></div>
+    </div>
+  </div>
+
+
+  <div class="gf-form-inline">
+    <div class="gf-form">
+      <label class="gf-form-label query-keyword width-7">
+        <span>METRICS</span>&nbsp;
+      </label>
+    </div>
+
+    <div class="gf-form" ng-repeat="metric in ctrl.metrics">
+      <metric-segment segment="metric"
+        get-options="ctrl.getMetricOptions()"
+        on-change="ctrl.somethingChanged()"></metric-segment>
+    </div>
+
+    <div class="gf-form">
+      <button class="btn btn-inverse gf-form-btn" ng-click="ctrl.addMetric()">
+        <i class="fa fa-plus "></i>
+      </button>
+    </div>
+
+    <div class="gf-form" ng-if="ctrl.metrics.length > 0">
+      <button class="btn btn-inverse gf-form-btn" ng-click="ctrl.removeMetric()">
+        <i class="fa fa-minus "></i>
+      </button>
+    </div>
+
+    <div class="gf-form gf-form--grow">
+      <div class="gf-form-label gf-form-label--grow"></div>
+    </div>
+  </div>
+
+
+  <div class="gf-form-inline">
+    <div class="gf-form">
+      <label class="gf-form-label query-keyword width-7">
+        <span>GROUP BY</span>&nbsp;
+      </label>
+    </div>
+
+    <div class="gf-form" ng-repeat="group in ctrl.groups">
+      <metric-segment segment="group"
+        get-options="ctrl.getGroupOptions()"
+        on-change="ctrl.somethingChanged()"></metric-segment>
+    </div>
+
+    <div class="gf-form">
+      <button class="btn btn-inverse gf-form-btn" ng-click="ctrl.addGroup()">
+        <i class="fa fa-plus "></i>
+      </button>
+    </div>
+
+    <div class="gf-form" ng-if="ctrl.groups.length > 0">
+      <button class="btn btn-inverse gf-form-btn" ng-click="ctrl.removeGroup()">
+        <i class="fa fa-minus "></i>
+      </button>
+    </div>
+
+    <div class="gf-form gf-form--grow">
+      <div class="gf-form-label gf-form-label--grow"></div>
+    </div>
+  </div>
+
+  <div class="gf-form-inline">
+    <gf-form-switch
+      class="gf-form"
+      label="AGGREGATE"
+      label-class="gf-form-label query-keyword width-7"
+      checked="ctrl.target.aggregate"
+      on-change="ctrl.somethingChanged()">
+    </gf-form-switch>
+
+    <div class="gf-form gf-form--grow">
+      <div class="gf-form-label gf-form-label--grow"></div>
+    </div>
+  </div>
+</query-editor-row>
