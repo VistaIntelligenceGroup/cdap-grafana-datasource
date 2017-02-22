@@ -33,6 +33,15 @@ CDAP datasource for Grafana
   * This will generally only be useful for some [singlestat panels](http://docs.grafana.org/reference/singlestat/) in Grafana.
 
 
+When selected, a `CONTEXT` field lists the available tags for the current context:
+
+![Tag List](https://raw.githubusercontent.com/VistaIntelligenceGroup/cdap-grafana-datasource/master/docs/images/tag-list.png)
+
+Similarly, a `METRICS` field lists the available metrics for the current context:
+
+![Metric List](https://raw.githubusercontent.com/VistaIntelligenceGroup/cdap-grafana-datasource/master/docs/images/metric-list.png)
+
+
 Please see the
 [CDAP Metrics documentation](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html)
 for more details.
