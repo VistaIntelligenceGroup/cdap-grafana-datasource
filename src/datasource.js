@@ -64,7 +64,7 @@ export class CDAPDatasource {
     };
 
     // Grafana provides timestamps that Date.parse can understand. So use that.
-    // It returns the number of miliseconds since the epoch, but CDAP wants it
+    // It returns the number of milliseconds since the epoch, but CDAP wants it
     // in seconds. So divide by 1000 and convert to an integer.
     let parseTime = x => ((Date.parse(x) / 1000) | 0);
 
@@ -113,7 +113,7 @@ export class CDAPDatasource {
           let secs = (target.aggregate && t === 0) ? timeRange.end : t;
 
           // Also, CDAP returns times in seconds since the epoch. Grafana wants
-          // the times in miliseconds.
+          // the times in milliseconds.
           return secs * 1000;
         };
         return _.map(response.data[refId].series, found => {
