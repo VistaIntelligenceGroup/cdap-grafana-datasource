@@ -41,6 +41,8 @@ Similarly, a `METRICS` field lists the available metrics for the current context
 
 ![Metric List](https://raw.githubusercontent.com/VistaIntelligenceGroup/cdap-grafana-datasource/master/docs/images/metric-list.png)
 
+> Note that sometimes it can take a moment before the list of metrics appears, depending on your CDAP deployment.
+
 
 Please see the
 [CDAP Metrics documentation](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html)
