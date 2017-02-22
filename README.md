@@ -16,20 +16,20 @@ CDAP datasource for Grafana
 ### Legend
 
 * `CONTEXT`
-** Specifies the tags for your query.
-** Corresponds to the `tag` query variable in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
-** [Available contexts](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#available-contexts).
+  * Specifies the tags for your query.
+  * Corresponds to the `tag` query variable in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
+  * [Available contexts](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#available-contexts).
 * `METRICS`
-** Specifies the metrics for your query.
-** Corresponds to the `metric` query variable in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
-** [Available system metrics](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#available-system-metrics).
+  * Specifies the metrics for your query.
+  * Corresponds to the `metric` query variable in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
+  * [Available system metrics](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#available-system-metrics).
 * `GROUP BY`
-** Specifies the groups for your query.
-** All data points that have the same values in tags specified in this setting will form a single timeseries.
-** Corresponds to the `groupBy` query variable in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
+  * Specifies the groups for your query.
+  * All data points that have the same values in tags specified in this setting will form a single timeseries.
+  * Corresponds to the `groupBy` query variable in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
 * `AGGREGATE`
-** Instructs CDAP to return the total aggregated value for the timeseries.
-** Corresponds to the `aggregate=true` option in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
+  * Instructs CDAP to return the total aggregated value for the timeseries.
+  * Corresponds to the `aggregate=true` option in [CDAP](http://docs.cask.co/cdap/current/en/reference-manual/http-restful-api/metrics.html#querying-a-metric).
 
 
 Please see the
